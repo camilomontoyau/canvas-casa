@@ -1,0 +1,33 @@
+<html>
+  <head></head>
+  <body>
+    <h1>taller canva</h1>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <script>
+      // hago referencia al elemento canvas
+      const canvas = document.getElementById('canvas')
+      
+      // tomo el contexto del canvas
+      const contexto = canvas.getContext('2d')
+      
+      // dibujo un rectangulo
+      contexto.strokeRect(75,140,150,100)
+
+      // dibuja puerta
+      contexto.fillRect(130, 180, 40, 60)
+
+      // empezamos el techo
+      contexto.beginPath()
+        
+      // dibuja linea del techo
+      contexto.moveTo(50, 140)
+      contexto.lineTo(150, 60)
+      contexto.lineTo(250, 140)
+      
+      // cierra el trazo
+      contexto.closePath()
+      contexto.stroke()
+
+    </script>
+  </body>
+</html>
